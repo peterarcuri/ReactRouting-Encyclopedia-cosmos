@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --primary: #000000;
+  --secondary: #24272e;
+  --third: #626b88;
+}
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Poppins';
+  background: var(--primary);
+}
+* {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p {
+  margin: 20px 0;
+}
+.back-button {
+  position: fixed; /* Fixed to viewport, not relative to content */
+  bottom: 20px;
+  left: 20px;
+  width: 120px;
+  height: 40px;
+  color: #ffffff;
+  border: 2px solid #62ff62;
+  background-color: transparent;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3); /* Slight hover effect */
+  color: var(--primary);
+}
+/* navbar */
+header nav {
+  position: fixed; /* Keeps the navbar at the top of the page */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 43px; /* Adjust to your preference */
+  background: rgba(105, 104, 104, 0.2); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Applies the blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  color: #000000;
+  z-index: 1000; /* Ensures the navbar stays on top of other content */
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0 20px; /* Adjust the padding for spacing */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+header nav span {
+  margin-right: auto;
+}
+header nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+header nav a.active {
+  background: var(--third);
+  color: var(--primary);
+}
+.navbar a:hover {
+  background: rgba(201, 192, 192, 0.3); /* Slight hover effect */
+}
+
+/* page content */
+main {
+  max-width: 1200px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+  position: relative; /* Add this line */
+}
